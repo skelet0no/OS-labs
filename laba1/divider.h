@@ -1,4 +1,4 @@
 #include <string>
 #include <iostream>
 
-void Divider(std::string fileName);
+void Divider(const std::string& fileName);

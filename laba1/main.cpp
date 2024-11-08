@@ -7,5 +7,7 @@ int main(){
 
     std::cout << "Enter .txt file name:" << std::endl;
     std::getline(std::cin, fileName);
-    Divider(fileName);
+    const std::string file = fileName;
+    Divider(file);
+    return 0;
 }

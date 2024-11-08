@@ -2,39 +2,38 @@
 #include <sstream>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include "child.h"
+#include <fstream>
 
-void Divider(std::string fileName) {
+void Divider(const std::string &fileName) {
     std::string line;
-    std::string number;
 
     std::ifstream infile(fileName);
     
     while (std::getline(infile, line)) {
         pid_t pid = fork();
-        int num;
 
         if (pid == 0) {
-            num = ProcessCommand(line);
-            if (num != -1) {
-                exit(EXIT_SUCCESS);
-            } else {
-                exit(EXIT_FAILURE);
-            }
+            execl("./child", const_cast<char *>(line.c_str()), nullptr);
+            perror("Failed");
+            exit(1);
         } else if (pid > 0) {
-            wait(nullptr);
+            int status;
+            waitpid(pid, &status, 0);
+            std::ifstream tempFile;
+            tempFile.open("temp.txt");
+            std::string num;
+            std::getline(tempFile, num);
+            if (num == "-1") {
+                std::cout << "Error: ZeroDivision\n";
+            } else if (num == "-2") {
+                std::cout << "\n";
+            } else {
+                std::cout << "Result: " << num << "\n";
+            }   
         } else {
             std::cout << "Error: CreateProcess\n";
             infile.close();
             return;
-        }
-        number = std::to_string(ProcessCommand(line));
-        if (number == "-1") {
-            std::cout << "Error: ZeroDivision\n";
-        } else if (number == "-2") {
-            std::cout << "\n";
-        } else {
-            std::cout << "Result: " << number << "\n";
         }
     }
 
