@@ -6,36 +6,40 @@
 const inline std::string pathToF1 = "./libf1.so";
 const inline std::string pathToF2 = "./libf2.so";
 
-typedef float (*PrimeNumsPointer)(int a);
+typedef int (*PrimeNumsPointer)(int(int a, int b));
 typedef std::vector<int> (*SortPointer)(std::vector<int> a);
 
-void handlePrimeNumbers(const std::function<int(int A, int B)>& CalcNums, std::istream& is, std::ostream& os) {
+using PrimeNumsFunc = std::function<int(int a, int b)>;
+using SorterFunc = std::function<std::vector<int> (std::vector<int>)>;
+
+void handlePrimeNumbers(const PrimeNumsFunc& CalcNums) {
     int a, b;
 
-    os << "Enter a and b: ";
-    is >> a >> b;
+    std::cout << "Enter a and b: ";
+    std::cin >> a >> b;
 
     int result = CalcNums(a, b);
-    os << "Result: " << result << std::endl;
+    std::cout << "Result: " << result << std::endl;
 }
 
-void handleSort(const std::function<std::vector<int> (std::vector<int>)>& SortingMethod, std::istream& is, std::ostream& os) {
+void handleSort(const SorterFunc& SortingMethod) {
     std::vector<int> numsList;
     size_t size;
 
-    os << "Enter the size of the array: ";
-    is >> size;
+    std::cout << "Enter the size of the array: ";
+    std::cin >> size;
 
-    os << "Enter the array elements separated by a space: ";
+    std::cout << "Enter the array elements separated by a space: ";
     int val;
     for (auto i = 0; i < size; ++i){
-        is >> val;
+        std::cin >> val;
         numsList.push_back(val);
     }
 
     auto result = SortingMethod(numsList);
-    os << "Result: ";
-    for (auto& item: result) os << item << " " << std::endl;
+    std::cout << "Result: ";
+    for (auto& item: result) std::cout << item << " ";
+    std::cout << std::endl;
 }
 
 void handlePrimeNumbersDynamic(void* libHandle, const std::string& funcName) {
