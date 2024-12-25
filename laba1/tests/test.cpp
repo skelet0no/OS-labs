@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <sstream>
-#include "../laba1/divider.h"
+#include "divider.h"
 
 std::string runDivider(const std::string &input) {
     std::string tempFileName = "test_divider.txt";
@@ -25,7 +25,7 @@ std::string runDivider(const std::string &input) {
     return buffer.str();
 }
 
-TEST(Test, ValidDivision) {
+TEST(Test1, ValidDivision) {
     std::string input = "100 5 2\n50 4 5\n30 3 0\n80 8 2\n20 2 0";
     std::string expectedOutput = "Result: 10\nResult: 2\nError: ZeroDivision\nResult: 5\nError: ZeroDivision\n";
 
