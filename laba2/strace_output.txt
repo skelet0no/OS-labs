@@ -1,0 +1,96 @@
+execve("./main", ["./main", "10000", "4"], 0x7ffe10653f00 /* 63 vars */) = 0
+brk(NULL)                               = 0x5942a4bd4000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc3be65e30) = -1 EINVAL (Недопустимый аргумент)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71c7c7831000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=91227, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 91227, PROT_READ, MAP_PRIVATE, 3, 0) = 0x71c7c781a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71c7c7400000
+mprotect(0x71c7c749a000, 1576960, PROT_NONE) = 0
+mmap(0x71c7c749a000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x71c7c749a000
+mmap(0x71c7c75ab000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x71c7c75ab000
+mmap(0x71c7c761b000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x71c7c761b000
+mmap(0x71c7c7629000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x71c7c7629000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71c7c7733000
+mmap(0x71c7c7741000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x71c7c7741000
+mmap(0x71c7c77bd000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x71c7c77bd000
+mmap(0x71c7c7818000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x71c7c7818000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71c7c7713000
+mmap(0x71c7c7716000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x71c7c7716000
+mmap(0x71c7c772d000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x71c7c772d000
+mmap(0x71c7c7731000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x71c7c7731000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\226 \25\252\235\23<l\274\3731\3540\5\226\327"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71c7c7000000
+mprotect(0x71c7c7028000, 2023424, PROT_NONE) = 0
+mmap(0x71c7c7028000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x71c7c7028000
+mmap(0x71c7c71bd000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x71c7c71bd000
+mmap(0x71c7c7216000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x71c7c7216000
+mmap(0x71c7c721c000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x71c7c721c000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71c7c7711000
+arch_prctl(ARCH_SET_FS, 0x71c7c77123c0) = 0
+set_tid_address(0x71c7c7712690)         = 94551
+set_robust_list(0x71c7c77126a0, 24)     = 0
+rseq(0x71c7c7712d60, 0x20, 0, 0x53053053) = 0
+mprotect(0x71c7c7216000, 16384, PROT_READ) = 0
+mprotect(0x71c7c7731000, 4096, PROT_READ) = 0
+mprotect(0x71c7c7818000, 4096, PROT_READ) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71c7c770f000
+mprotect(0x71c7c761b000, 45056, PROT_READ) = 0
+mprotect(0x5942a47b7000, 4096, PROT_READ) = 0
+mprotect(0x71c7c786b000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x71c7c781a000, 91227)           = 0
+getrandom("\x02\xa3\xf0\xd8\x44\x4c\xee\x85", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x5942a4bd4000
+brk(0x5942a4bf5000)                     = 0x5942a4bf5000
+futex(0x71c7c762977c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x71c7c7091870, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x71c7c7042520}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x71c7c67ff000
+mprotect(0x71c7c6800000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x71c7c6fff910, parent_tid=0x71c7c6fff910, exit_signal=0, stack=0x71c7c67ff000, stack_size=0x7fff00, tls=0x71c7c6fff640} => {parent_tid=[94552]}, 88) = 94552
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x71c7bf7ff000
+mprotect(0x71c7bf800000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x71c7bffff910, parent_tid=0x71c7bffff910, exit_signal=0, stack=0x71c7bf7ff000, stack_size=0x7fff00, tls=0x71c7bffff640} => {parent_tid=[94553]}, 88) = 94553
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x71c7c5ffe000
+mprotect(0x71c7c5fff000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x71c7c67fe910, parent_tid=0x71c7c67fe910, exit_signal=0, stack=0x71c7c5ffe000, stack_size=0x7fff00, tls=0x71c7c67fe640} => {parent_tid=[94554]}, 88) = 94554
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x71c7c57fd000
+mprotect(0x71c7c57fe000, 8388608, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x71c7c5ffd910, parent_tid=0x71c7c5ffd910, exit_signal=0, stack=0x71c7c57fd000, stack_size=0x7fff00, tls=0x71c7c5ffd640} => {parent_tid=[94555]}, 88) = 94555
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0x71c7c6fff910, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 94552, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+futex(0x71c7bffff910, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 94553, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=7888, ...}, AT_EMPTY_PATH) = 0
+write(1, "Probability of the top two cards"..., 55Probability of the top two cards being the same: 0.054
+) = 55
+exit_group(0)                           = ?
++++ exited with 0 +++
