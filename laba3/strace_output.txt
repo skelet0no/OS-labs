@@ -1,0 +1,110 @@
+execve("./main", ["./main"], 0x7fffa5b87ba0 /* 46 vars */) = 0
+brk(NULL)                               = 0x6536aecb6000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fffd5f7eed0) = -1 EINVAL (Недопустимый аргумент)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f2f02bf000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=91227, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 91227, PROT_READ, MAP_PRIVATE, 3, 0) = 0x76f2f02a8000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f2f0000000
+mprotect(0x76f2f009a000, 1576960, PROT_NONE) = 0
+mmap(0x76f2f009a000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x76f2f009a000
+mmap(0x76f2f01ab000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x76f2f01ab000
+mmap(0x76f2f021b000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x76f2f021b000
+mmap(0x76f2f0229000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76f2f0229000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f2f0288000
+mmap(0x76f2f028b000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x76f2f028b000
+mmap(0x76f2f02a2000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x76f2f02a2000
+mmap(0x76f2f02a6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x76f2f02a6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\226 \25\252\235\23<l\274\3731\3540\5\226\327"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f2efc00000
+mprotect(0x76f2efc28000, 2023424, PROT_NONE) = 0
+mmap(0x76f2efc28000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x76f2efc28000
+mmap(0x76f2efdbd000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x76f2efdbd000
+mmap(0x76f2efe16000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x76f2efe16000
+mmap(0x76f2efe1c000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76f2efe1c000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f2eff19000
+mmap(0x76f2eff27000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x76f2eff27000
+mmap(0x76f2effa3000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x76f2effa3000
+mmap(0x76f2efffe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x76f2efffe000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f2f0286000
+arch_prctl(ARCH_SET_FS, 0x76f2f02873c0) = 0
+set_tid_address(0x76f2f0287690)         = 124943
+set_robust_list(0x76f2f02876a0, 24)     = 0
+rseq(0x76f2f0287d60, 0x20, 0, 0x53053053) = 0
+mprotect(0x76f2efe16000, 16384, PROT_READ) = 0
+mprotect(0x76f2efffe000, 4096, PROT_READ) = 0
+mprotect(0x76f2f02a6000, 4096, PROT_READ) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f2f0284000
+mprotect(0x76f2f021b000, 45056, PROT_READ) = 0
+mprotect(0x6536ad7bd000, 4096, PROT_READ) = 0
+mprotect(0x76f2f02f9000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x76f2f02a8000, 91227)           = 0
+getrandom("\x68\x18\x0c\xd6\x14\x17\xaa\x9a", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x6536aecb6000
+brk(0x6536aecd7000)                     = 0x6536aecd7000
+futex(0x76f2f022977c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=5259, ...}, AT_EMPTY_PATH) = 0
+write(1, "Enter filename: ", 16Enter filename: )        = 16
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+read(0, "temp\n", 1024)                 = 5
+openat(AT_FDCWD, "/dev/shm/shm_example", O_RDWR|O_CREAT|O_NOFOLLOW|O_CLOEXEC, 0666) = 3
+ftruncate(3, 1024)                      = 0
+mmap(NULL, 1024, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x76f2f02f8000
+rt_sigaction(SIGUSR1, {sa_handler=0x6536ad7bb5f7, sa_mask=[USR1], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x76f2efc42520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x6536ad7bb60f, sa_mask=[CHLD], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x76f2efc42520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x76f2f0287690) = 125131
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=125131, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=125131, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=125131, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=125131, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=125131, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_USER, si_pid=125131, si_uid=1000} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+pause()                                 = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=125131, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigreturn({mask=[]})                 = -1 EINTR (Прерван системный вызов)
+munmap(0x76f2f02f8000, 1024)            = 0
+unlink("/dev/shm/shm_example")          = 0
+write(1, "25\nError: Invalid input\nError: I"..., 6925
+Error: Invalid input
+Error: Invalid input
+2
+Error: ZeroDivision
+1
+) = 69
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+exit_group(0)                           = ?
++++ exited with 0 +++
