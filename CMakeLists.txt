@@ -19,4 +19,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+add_subdirectory(laba1)
+add_subdirectory(laba2)
 add_subdirectory(laba3)
+add_subdirectory(laba4)
